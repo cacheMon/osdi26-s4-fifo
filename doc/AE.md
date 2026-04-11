@@ -1,7 +1,8 @@
 
 # How to reproduce the results
 ## OS support
-All of the experiments should be operating-system-agnostic, however, we have not tested on Ubuntu 20.04 LTS, and we provide installation instructions for Ubuntu. Therefore, we recommend using Ubuntu 20 or Ubuntu 22 for reproducing the results.
+All of the experiments should be operating-system-agnostic, however, all stuff has been tested on Ubuntu 22.04 LTS, and we provide installation instructions for Ubuntu.
+Therefore, we recommend using Ubuntu 22 or Ubuntu 24 for reproducing the results.
 
 ## Install Dependency
 ```bash
