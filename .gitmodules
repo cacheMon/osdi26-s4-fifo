@@ -2,9 +2,6 @@
 	path = libCacheSim
 	url = https://github.com/haochengxia/libCacheSim
 	branch = s4-fifo
-[submodule "distComp"]
-	path = distComp
-	url = https://github.com/1a1a11a/distComp.git
 [submodule "CacheLib"]
 	path = CacheLib
 	url = https://github.com/williamnixon20/CacheLib
