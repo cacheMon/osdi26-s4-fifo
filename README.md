@@ -1,51 +1,11 @@
-# S4-FIFO: Learning-Augmented Heuristics for Cache Eviction
+# S4-FIFO
 
-This is the artifact repository for the paper:
+This is the artifact repository for the paper: "_Learning-Augmented Heuristics: Simple, yet Smart, Robust and Interpretable Cache Eviction_".
 
-## Learning-Augmented Heuristics: Simple, yet Smart, Robust and Interpretable Cache Eviction
+<div style="text-align: center;">
+  <img src="/doc/diagram/overview.svg" alt="diagram" width="480"/>
+</div>
 
-**Venue**: OSDI 2026
-
-**Authors**: Haocheng Xia (Harvard & UIUC), William Nixon (U Chicago), Bintang Dwi Marthen (ITB), Pranav Bhandari (Meta), Juncheng Yang (Harvard)
-
-## Overview
-
-S4-FIFO is a **learning-augmented cache eviction algorithm** that achieves:
-- **26% mean efficiency improvement** over S3-FIFO
-- **8% improvement** over 3L-Cache (previous SOTA)
-- **0.8% robustness guarantee** - worst-case miss ratio increase vs FIFO
-- **Throughput parity** with traditional heuristics like LRU
-- **Interpretable decisions** based on cache-level parameters
-
-### Key Innovation
-
-Unlike existing smart caches that suffer from instability or objective mismatch, S4-FIFO uses:
-- **Periodic cache-level learning** (not per-miss object-level)
-- **Pre-trained foundation model** on 4,140 production traces
-- **Separation of concerns**: simple data path + async control path
-- **Cost-sensitive learning** anchored to robustness
-
-## Quick Start
-
-**For a 1-hour quick evaluation**:
-```bash
-python scripts/quick_eval.py
-```
-
-**For full reproduction (14 weeks)**:
-See [Detailed Reproduction Guide](docs/REPRODUCTION.md)
-
-**For paper/architecture overview**:
-See [Artifact Guide](docs/GUIDE.md)
-
-## Documentation
-
-- **[GUIDE.md](docs/GUIDE.md)** - Overview, architecture, and quick start
-- **[REPRODUCTION.md](docs/REPRODUCTION.md)** - Complete 10-phase reproduction guide (14 weeks)
-- **[CASE_STUDIES.md](docs/CASE_STUDIES.md)** - Related projects and implementations
-- **[PROJECTS.md](docs/PROJECTS.md)** - Implementation details and file structure
-
-## Core Concept
 
 ### Learning-Augmented Heuristics (LAH) Framework
 
@@ -62,8 +22,8 @@ Data Path (Always):
 
 ### S4-FIFO Algorithm
 
-- **4 FIFO Queues**: Small, Main, Ghost, Skip
-- **6 Learnable Parameters**: Queue sizes, promotion thresholds
+- **3 FIFO Queues**: Small, Main, Ghost
+- **5 Learnable Parameters**: Skip ratio, Queue sizes, promotion thresholds
 - **73 Features**: Cache metrics and workload characteristics
 - **GBDT Model**: Trained on 4,140 traces, 18-class output
 
