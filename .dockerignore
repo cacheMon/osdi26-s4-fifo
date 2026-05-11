@@ -1,0 +1,41 @@
+# Git (not needed in Docker, and git submodule won't work without it)
+.git
+.gitmodules
+.gitignore
+
+# Build artifacts (rebuilt inside Docker)
+libCacheSim/build
+CacheLib
+**/build/
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.venv
+venv
+
+# Analysis outputs (large generated files)
+analysis/*.png
+analysis/*.pdf
+analysis/*.pkl
+analysis/cleaned/*.zip
+analysis/cleaned/individual_plots
+analysis/cleaned/individual_plots_lru
+analysis/cleaned/individual_plots_wss
+analysis/xgb_18class_results
+analysis/xgb_18class_results_lite_wss
+analysis/xgb_config_results
+analysis/xgb_results
+analysis/minor
+
+# IDE and OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Docker files themselves
+Dockerfile
+.dockerignore

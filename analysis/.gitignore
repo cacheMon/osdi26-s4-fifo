@@ -1,0 +1,31 @@
+# Generated model outputs (too large for git, retrain with scripts)
+xgb_18class_results/
+xgb_18class_results_lite_wss/
+xgb_config_results/
+xgb_results/
+
+# Generated intermediate data (regenerated from scripts + raw data)
+cleaned/
+
+# Large data files (regenerated from simulation)
+aggregated_results.csv
+features_*.csv
+
+# GPU experiment artifacts
+gpu/
+
+# Internal/empty directories
+minor/
+
+# Internal cluster trace lists (contain internal paths)
+trace.txt
+
+# Generated files
+__pycache__/
+*.pyc
+*.png
+*.pdf
+*.zip
+*.pkl
+*.pickle
+*.xlsx
